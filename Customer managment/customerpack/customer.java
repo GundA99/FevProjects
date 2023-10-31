@@ -6,7 +6,14 @@ public class customer implements Comparable<customer>{
 	private int customerid = id;
 	private String fname,lname,email,password;
 	private double regAmount;
-	private LocalDate dob;
+	private LocalDate dob,lastdateSubcription;
+	
+	
+	public LocalDate getLastdateSubcription() {
+		return lastdateSubcription;
+	}
+
+
 	private ServicePlan plan;
 	public static int id;
 	
@@ -21,7 +28,7 @@ public class customer implements Comparable<customer>{
 
 
 	public customer(String fname, String lname, String email, String password, double regAmount, LocalDate dob,
-			String plan) {
+			String plan,String subcriptionDate) {
 		super();
 		this.fname = fname;
 		this.lname = lname;
@@ -32,6 +39,7 @@ public class customer implements Comparable<customer>{
 //		this.plan = plan;
 		this.plan = ServicePlan.valueOf(plan);
 		this.customerid = id++;
+		this.lastdateSubcription = LocalDate.parse(subcriptionDate);
 	}
 
 

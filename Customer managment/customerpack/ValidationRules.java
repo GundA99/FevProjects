@@ -35,11 +35,11 @@ public class ValidationRules {
 	}
 
 	public static customer validation(String fname, String lname, String email, String password, double regAmount,
-			String dob, String plan, List<customer> List) throws InvalidCustomerException {
+			String dob, String plan, List<customer> List,String subc) throws InvalidCustomerException {
 		LocalDate d = parseDate(dob);
 		parseAndValidatePlan(plan);
 		checkDuplicate(email, List);
 
-		return new customer(fname, lname, email, password, regAmount, d, plan);
+		return new customer(fname, lname, email, password, regAmount, d, plan,subc);
 	}
 }

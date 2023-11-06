@@ -1,0 +1,41 @@
+[customerId = 101
+ name = akash gund
+ email = akash123@gmail.com
+ password = passw
+ PhoneNO = 9156917179
+ Address =Solapur
+ registerdDate = 2021-05-05 PlanEndDate = 2021-08-05
+ plan = QUATERLY, Amount = 11700.0
+----------------------------, customerId = 102
+ name = jayesh thombre
+ email = jt123@gmail.com
+ password = pass
+ PhoneNO = 8789987809
+ Address =Jalgaon
+ registerdDate = 2023-01-08 PlanEndDate = 2023-02-08
+ plan = MONTHLY, Amount = 3000.0
+----------------------------, customerId = 104
+ name = pranay Rahandale
+ email = pr125@gmail.com
+ password = pass
+ PhoneNO = 9178998789
+ Address =gondia
+ registerdDate = 2022-07-18 PlanEndDate = 2023-07-18
+ plan = YEARLY, Amount = 32000.0
+----------------------------, customerId = 103
+ name = kalpesh patil
+ email = kp125@gmail.com
+ password = pass
+ PhoneNO = 9178998789
+ Address =Akurdi
+ registerdDate = 2022-07-18 PlanEndDate = 2023-07-18
+ plan = YEARLY, Amount = 32000.0
+----------------------------, customerId = 109
+ name = piyush kolhe
+ email = pk143@gmail.com
+ password = pass
+ PhoneNO = 8017658789
+ Address =Jalgaon
+ registerdDate = 2021-01-18 PlanEndDate = 2021-07-18
+ plan = HALFYEAR, Amount = 17500.0
+----------------------------]

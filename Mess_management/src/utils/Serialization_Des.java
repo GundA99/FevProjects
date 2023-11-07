@@ -48,17 +48,10 @@ public class Serialization_Des {
 	}
 
 	public static List<String> retriveData(String fname) throws FileNotFoundException, IOException {
-		try (BufferedReader br = new BufferedReader(new FileReader(fname)))
-		{
-			String line;
-			List<String>custlist = new ArrayList<String>();
-			while((line=br.readLine())!=null)
-			{
-				custlist.add(line);
-				System.out.println();
-			}
-			
-			return custlist;
+		try (BufferedReader br = new BufferedReader(new FileReader(fname))) {
+
+			br.lines().forEach(s -> System.out.println(s));
+			return null;
 		}
 	}
 

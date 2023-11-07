@@ -189,6 +189,7 @@ public class Tester {
 				case 14:
 					System.out.println("Enter the file name to Store");
 					StoreData(custlist, sc.next());
+					System.out.println("Data is Stored !");
 					break;
 				case 15: 
 					System.out.println(retriveData(sc.next()));

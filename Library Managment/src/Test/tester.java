@@ -1,10 +1,16 @@
 package Test;
 
 import Library.*;
-import utils.Populatedlist;
 import static utils.Populatedlist.PopulatedList;
-import java.time.LocalDate;
-import java.util.ArrayList;
+
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.PrintWriter;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
@@ -23,7 +29,7 @@ public class tester {
 
 		try {
 			while (!Exit) {
-				System.out.println("1: Sign up\n2: Sign in\n3: Change Password\n4: Un-Subscribe Reader\n5: Display all Readers\n0: Exit");
+				System.out.println("1: Sign up\n2: Sign in\n3: Change Password\n4: Un-Subscribe Reader\n5: Display all Readers\n6: Store Data in txt\n7: Read data from txt\n8: Serialization\n9: De-Serialization\n0: Exit");
 				switch (sc.nextInt()) {
 				case 1:
 					System.out.println("fname,lname, email, password, registrationAmount, dob, plan	");
@@ -82,6 +88,38 @@ public class tester {
 					break;
 				case 5:
 					rlist.forEach(p -> System.out.println(p));
+					break;
+				case 6 :
+					System.out.println("Enter the file name");
+					try(PrintWriter pw = new PrintWriter(new FileWriter(sc.next())))
+					{
+						pw.println(rlist);
+						System.out.println("Date is stored !");
+					}
+					break;
+				case 7:
+					System.out.println("Enter the file name");
+					try(BufferedReader br = new BufferedReader(new FileReader(sc.next())))
+					{
+						br.lines().forEach(System.out::println);
+					}
+					break;
+					
+				case 8:
+					System.out.println("Enter the file name");
+					try(ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(sc.next())))
+					{
+						out.writeObject(rlist);
+						System.out.println("Data is Stored !");
+					}
+					break;
+				case 9:
+					System.out.println("Enter the file name");
+					try(ObjectInputStream in = new ObjectInputStream(new FileInputStream(sc.next())))
+					{
+						List<Reader> list =  (List<Reader>) in.readObject();
+						list.forEach(p->System.out.println(p));
+					}
 					break;
 				case 0:
 					Exit = true;

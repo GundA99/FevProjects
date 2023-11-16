@@ -1,8 +1,9 @@
 package Library;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class Reader {
+public class Reader implements Serializable {
 
 	private  int readerid;
 	private String fname,lname,email,password;
